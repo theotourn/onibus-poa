@@ -121,8 +121,8 @@ function App() {
             </div>
           ) : (
             Object.entries(horarios).map(([sentido, horariosPorDia]) => (
-              <div key={sentido}>
-                <h3 className='text-center mt-3'>{sentido}</h3>
+              <div className='list-group list-group-flush' key={sentido}>
+                <h3 className='list-group-item text-center mt-4 p-2 fw-bold'>{sentido}</h3>
                 {Object.entries(horariosPorDia)
                   .sort()
                   .map(([tipoDia, horariosDoDia]) => {
@@ -131,8 +131,8 @@ function App() {
                     }
 
                     return (
-                      <div key={tipoDia}>
-                        <h4 className='text-center'>{formatarNomeDia(tipoDia)}</h4>
+                      <div className='list-group-item text-center' key={tipoDia}>
+                        <h4>{formatarNomeDia(tipoDia)}</h4>
                         {horariosDoDia.sort(compareHorarios).map((horario) => (
                           <div key={horario._id} className='badge bg-primary m-1'>
                             {horario.horario_largada}
