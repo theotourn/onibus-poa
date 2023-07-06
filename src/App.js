@@ -1,5 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import consultarHorariosAPI from './services/datapoaAPI';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBus } from '@fortawesome/free-solid-svg-icons';
+
 
 function App() {
   const [linha, setLinha] = useState('');
@@ -97,7 +100,7 @@ function App() {
       <div className='card'>
         <div className='card-header'>
           <h2 className='card-title'>
-            <span>Horários de ônibus</span>
+            <span><FontAwesomeIcon icon={faBus} className='pe-1' />Horários de ônibus</span>
           </h2>
         </div>
         <div className='card-body'>
