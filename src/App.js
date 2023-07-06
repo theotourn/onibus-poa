@@ -75,7 +75,7 @@ function App() {
     try {
       setIsLoading(true);
       const { horarios: initialHorarios, nextLink } = await consultarHorariosAPI(
-        `https://dadosabertos.poa.br/api/3/action/datastore_search?resource_id=cb96a73e-e18b-4371-95c5-2cf20e359e6c&q=${linha}`
+        `https://dadosabertos.poa.br/api/3/action/datastore_search?resource_id=cb96a73e-e18b-4371-95c5-2cf20e359e6c&q=${linha}&limit=50000`
       );
       const filteredInitialHorarios = initialHorarios.filter((horario) => horario.tipo_tabela === 'OFICIAL');
       const horariosOrganizados = organizarHorariosPorSentidoDia(filteredInitialHorarios, {});
