@@ -102,7 +102,7 @@ function App() {
 
   return (
     <div>
-      <div className='navbar bg-success' style={{ height: "4rem" }}>
+      <div className='navbar bg-danger' style={{ height: "4rem" }}>
         <div className='container'>
           <span className='fs-3 text-white'>
             <FontAwesomeIcon icon={faBus} className='pe-1' />
@@ -121,7 +121,7 @@ function App() {
                 value={linha}
                 onChange={(e) => setLinha(e.target.value)}
               />
-              <button className='btn btn-success' onClick={consultarHorarios}>
+              <button className='btn btn-danger' onClick={consultarHorarios}>
                 Consultar
               </button>
             </div>
@@ -152,7 +152,7 @@ function App() {
                         <div className='list-group-item text-center' key={tipoDia}>
                           <h4 className='mt-4'>{formatarNomeDia(tipoDia)}</h4>
                           {horariosDoDia.sort(compareHorarios).map((horario) => (
-                            <div key={horario._id} className='badge bg-success m-1'>
+                            <div key={horario._id} className='badge bg-danger m-1'>
                               {horario.horario_largada}
                             </div>
                           ))}
