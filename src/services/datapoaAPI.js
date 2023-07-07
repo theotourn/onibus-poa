@@ -7,7 +7,6 @@ const consultarHorariosAPI = async (endpoint) => {
     const response = await axios.get(endpoint);
 
     const data = response.data;
-    console.log(response.data.result._links.next);
     if (data.result && data.result.records) {
       const horarios = data.result.records;
 
